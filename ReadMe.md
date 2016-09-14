@@ -1,6 +1,7 @@
 # comic-opener
 
 A little program for tracking comics, or anything you want, really
+
 csv format: Name,URL,M,Tu,W,Th,F
 include as many days of the week as needed, but as of now it's matched exactly,
 so capitilazation has to be correct; this is an easy fix and will be corrected later
