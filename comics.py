@@ -6,7 +6,7 @@ import os
 os.environ.setdefault('ESCDELAY', '25')
 
 COMICCSV = os.path.dirname(os.path.realpath(__file__)) + '/comics.csv'
-VERSION = '1.2.1'
+VERSION = '1.2.2'
 LINE_LENGTH = 20
 
 
@@ -195,31 +195,31 @@ def parseComics(comicFile):
     for comic1 in comicsfile:
         comic = comic1.strip().split(',')
         current = [comic[0], comic[1]]
-        if 'M' in comic[2:]:
+        if 'M' in comic[2:].upper():
             comics['M'][comic[0]] = comic[1]
             current.append('X ')
         else:
             current.append('  ')
 
-        if 'T' in comic[2:]:
+        if 'T' in comic[2:].upper():
             comics['T'][comic[0]] = comic[1]
             current.append('X ')
         else:
             current.append('  ')
 
-        if 'W' in comic[2:]:
+        if 'W' in comic[2:].upper():
             comics['W'][comic[0]] = comic[1]
             current.append('X ')
         else:
             current.append('  ')
 
-        if 'Th' in comic[2:]:
+        if 'TH' in comic[2:].upper():
             comics['Th'][comic[0]] = comic[1]
             current.append('X ')
         else:
             current.append('  ')
 
-        if 'F' in comic[2:]:
+        if 'F' in comic[2:].upper():
             comics['F'][comic[0]] = comic[1]
             current.append('X ')
         else:
@@ -231,7 +231,7 @@ def parseComics(comicFile):
         else:
             current.append('  ')
 
-        if 'Su' in comic[2:]:
+        if 'SU' in comic[2:].upper():
             comics['Su'][comic[0]] = comic[1]
             current.append('X ')
         else:
